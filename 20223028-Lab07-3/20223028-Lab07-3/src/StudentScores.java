@@ -1,20 +1,19 @@
 public class StudentScores {
 	private final int MAX_STUDENTS = 100;
-	private String[] names;
-	private int[] scores;
+	private Student[] students;
 	private int numStudents;
 
 	public StudentScores() {
-		scores = new int[MAX_STUDENTS];
-		names = new String[MAX_STUDENTS];
+		students = new Student[MAX_STUDENTS];
 		numStudents = 0;
 	}
 
 	public void add(String name, int score) {
 		if (numStudents >= MAX_STUDENTS)
 			return; // not enough space to add new student score
-		names[numStudents] = name;
-		scores[numStudents] = score;
+		students[numStudents] = new Student();
+		students[numStudents].setName(name);
+		students[numStudents].setScore(score);
 		numStudents++;
 	}
 
@@ -25,10 +24,10 @@ public class StudentScores {
 		int highest = 0;
 
 		for (int i = 1; i < numStudents; i++)
-			if (scores[i] > scores[highest])
+			if (students[i].getScore() > students[highest].getScore())
 				highest = i;
 
-		return names[highest];
+		return students[highest].getName();
 	}
 
 	public String getLowest() {
@@ -38,9 +37,9 @@ public class StudentScores {
 		int lowest = 0;
 
 		for (int i = 1; i < numStudents; i++)
-			if (scores[i] < scores[lowest])
+			if (students[i].getScore() < students[lowest].getScore())
 				lowest = i;
 
-		return names[lowest];
+		return students[lowest].getName();
 	}
 }

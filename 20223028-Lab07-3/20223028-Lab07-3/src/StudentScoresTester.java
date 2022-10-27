@@ -17,11 +17,14 @@ public class StudentScoresTester {
 				int score = in.nextInt();
 				in.nextLine(); // skip the end-of-line character
 				/** Your code goes here */
+				studSc.add(name, score);
 			}
 		} while (!done);
 
 		// Find the students with highest and lowest scores and print
 		// their names and scores
 		/** And here */
+		System.out.println(studSc.getHighest());
+		System.out.println(studSc.getLowest());
 	}
 }
