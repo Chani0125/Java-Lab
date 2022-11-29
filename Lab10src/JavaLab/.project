@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Test</name>
+	<name>JavaLab</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1669704459171</id>
+			<id>1669715332674</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
